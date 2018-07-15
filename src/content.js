@@ -1,4 +1,9 @@
 function getLastVersionTag() {
+    const versionDetails = document.querySelector(".issue-details.session-details .emphasis");
+    if (versionDetails) {
+        return versionDetails.textContent.split(" ")[1];
+    }
+
     return document.querySelectorAll(".build-version-table tbody tr td:nth-child(1) a")[0].textContent.split(" ")[0];
 }
 
@@ -43,9 +48,7 @@ function addLinksToTraceItems() {
 }
 
 const obs = new MutationObserver(function (mutations, observer) {
-    console.log("Mutation start");
     if (document.querySelector(".stack-frame.developer-code") && !document.querySelector(".stacktrace").classList.contains("cl-loaded")) {
-        console.log("Mutation");
         addLinksToTraceItems();
         document.querySelector(".stacktrace").classList.add("cl-loaded");
     }
