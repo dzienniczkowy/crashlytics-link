@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Crashlytics link",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "",
+    "description": "Description of the extension."
+  }
+}

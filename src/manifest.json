@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "version": "0.1.0",
+  "author": "wulkanowy",
+  "homepage_url": "https://github.com/wulkanowy/crashlytics-link",
+  "default_locale": "pl",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://fabric.io/*/*/apps/*/issues/*",
+        "*://fabric.io/*/*/apps/*/issues/*/sessions/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+}
