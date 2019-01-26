@@ -1,6 +1,6 @@
 {
   "name": "crashlytics-link",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "web extension",
   "main": "index.js",
   "scripts": {
